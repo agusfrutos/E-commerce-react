@@ -40,7 +40,7 @@
 .navFooter {
   background-color: #222;
   display:flex;
-  position:sticky;
+
   bottom: 0;
   right: 0;
   left: 0;

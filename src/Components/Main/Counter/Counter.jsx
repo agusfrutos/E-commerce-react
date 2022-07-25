@@ -7,17 +7,17 @@ const Counter = ({ add, stock, initial }) => {
   const [count, setCount] = useState(initial);
   const navigate = useNavigate();
 
-  const Sumar = () => {
+  const sumar = () => {
     // count >= stock ? console.log('No hay mas stock') : setCount(count + 1);
     count < stock && setCount(count + 1);
   };
 
-  const Restar = () => {
+  const restar = () => {
     // count < 2 ? console.log('por favor seleccione al menos un producto') : setCount(count - 1);
     initial < count && setCount(count - 1);
   };
 
-  const Reset = () => {
+  const reset = () => {
     setCount(initial);
     navigate("/cart");
   };
@@ -25,14 +25,14 @@ const Counter = ({ add, stock, initial }) => {
   return (
     <div className={s.counter}>
       <div className={s.botones}>
-        <button className={s.resta} onClick={Restar}>-</button>
+        <button className={s.resta} onClick={restar}>-</button>
       <p className={s.numero}>{count}</p>
-        <button className={s.suma} onClick={Sumar}>+</button>
+        <button className={s.suma} onClick={sumar}>+</button>
       </div>
-      <button className={s.agregar} onClick={Reset}>
+      <button className={s.agregar} onClick={reset}>
         Agregar al Carrito
       </button>
-      {/* <button className={s.reset} onClick={Reset}>
+      {/* <button className={s.reset} onClick={reset}>
         Reset
       </button> */}
     </div>
