@@ -1,13 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { CartContext } from "../../../Context/CartContext";
 import Counter from "../Counter/Counter";
 
 import s from "./CardDetail.module.css";
 
-const CardDetail = ({ item, categoria }) => {
-  const add = () => {
-    console.log("añadido")
-  }
+const CardDetail = ({ item }) => {
+  const { addToCart } = useContext(CartContext);
+
+  const navigate = useNavigate();
+  const add = (cantidad) => {
+    addToCart(item, cantidad);
+    navigate("/cart");
+  };
+
   return (
     <div className={s.detail}>
       <img src={item.img} alt={item.name} />
@@ -20,8 +26,13 @@ const CardDetail = ({ item, categoria }) => {
           commodi optio itaque facere, praesentium rerum. Quisquam inventore
           quia delectus sapiente illum!
         </p>
-        <Counter stock={item.stock} initial={1} add={add}/>
-        <p className={s.categoria}> Categoría: <strong><Link to={`/category/${item.categoria}`}>{item.categoria}</Link></strong>  </p>
+        <Counter stock={item.stock} initial={1} add={add} />
+        <p className={s.categoria}>
+          Categoría:
+          <strong>
+            <Link to={`/category/${item.categoria}`}>{item.categoria}</Link>
+          </strong>
+        </p>
       </div>
     </div>
   );

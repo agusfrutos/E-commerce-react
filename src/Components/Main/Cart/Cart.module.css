@@ -1,0 +1,39 @@
+.cartContainer {
+  min-height: 80vh;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.buttonhome {
+  width: 150px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  color: black;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin: 10px 0px;
+}
+
+.buttonhome a {
+  color: black;
+  text-decoration: none;
+}
+
+.buttonhome:hover {
+ background-color: #999;
+}
+
+.vaciar {
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin: 10px 0px;
+}
+

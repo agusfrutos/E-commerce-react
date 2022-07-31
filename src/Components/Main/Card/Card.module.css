@@ -7,13 +7,21 @@
   flex-direction: column;
   min-height: 80vh;
   text-align: center;
-
+}
+@keyframes card-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .cardlist {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  animation: card-opacity 1s;
 }
 
 .card {
@@ -21,14 +29,13 @@
 }
 
 .card img {
-   max-width: 100%; 
-  object-fit: cover; 
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .card .info {
   display: flex;
   justify-content: space-between;
-
 }
 
 .card .info h3 {

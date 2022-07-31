@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 import s from "./Counter.module.css";
 
 const Counter = ({ add, stock, initial }) => {
   const [count, setCount] = useState(initial);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const sumar = () => {
     // count >= stock ? console.log('No hay mas stock') : setCount(count + 1);
@@ -17,10 +17,14 @@ const Counter = ({ add, stock, initial }) => {
     initial < count && setCount(count - 1);
   };
 
-  const reset = () => {
-    setCount(initial);
-    navigate("/cart");
-  };
+  // const reset = () => {
+  //   setCount(initial);
+  //   navigate("/cart");
+  // };
+
+  const agregar = () => {
+    add(count);
+};
 
   return (
     <div className={s.counter}>
@@ -29,11 +33,11 @@ const Counter = ({ add, stock, initial }) => {
       <p className={s.numero}>{count}</p>
         <button className={s.suma} onClick={sumar}>+</button>
       </div>
-      <button className={s.agregar} onClick={reset}>
+      <button className={s.agregar} onClick={agregar}>
         Agregar al Carrito
       </button>
       {/* <button className={s.reset} onClick={reset}>
-        Reset
+        <Reset></Reset>
       </button> */}
     </div>
   );
