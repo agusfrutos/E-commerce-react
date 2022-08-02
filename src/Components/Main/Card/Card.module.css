@@ -26,6 +26,7 @@
 
 .card {
   width: 18%;
+  padding-top: 10px;
 }
 
 .card img {
@@ -58,6 +59,17 @@
   font-size: 1em;
   font-weight: 700;
   margin: 0 0 40px 0;
+}
+
+.imagefavorite {
+  position:relative;
+}
+
+.favorite {
+  position: absolute;
+  min-width:10%;
+  right: 0;
+  top: 0;
 }
 
 @media only screen and (max-width: 700px) {

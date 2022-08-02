@@ -6,7 +6,8 @@ import s from "./Cart.module.css";
 // import Form from '../Form/Form'
 
 const Cart = () => {
-  const { cart, clearCart, deleteOne, restarCart, sumarCart } = useContext(CartContext);
+  const { cart, totalCart, clearCart, deleteOne, restarCart, sumarCart } =
+    useContext(CartContext);
 
   if (cart.length === 0) {
     return (
@@ -23,13 +24,19 @@ const Cart = () => {
     <>
       <div className={s.cartContainer}>
         {cart.map((prod) => (
-          <CartDetail key={prod.id} prod={prod} deleteOne={deleteOne} restarCart={restarCart} sumarCart={sumarCart} />
+          <CartDetail
+            key={prod.id}
+            prod={prod}
+            deleteOne={deleteOne}
+            restarCart={restarCart}
+            sumarCart={sumarCart}
+          />
         ))}
         <div>
           <button className={s.vaciar} onClick={clearCart}>
             Vaciar carrito
           </button>
-          <h2>Total: $ </h2>
+          <h2>Total: ${totalCart} </h2>
         </div>
       </div>
       {/* <Form /> */}

@@ -3,16 +3,6 @@ import { Link } from "react-router-dom";
 import s from "./CartDetail.module.css";
 
 const CartDetail = ({ prod, deleteOne, sumarCart, restarCart }) => {
- 
-
-  function sumarCarrito(id) {
-    prod.cantidad < prod.stock && sumarCart(prod.id)
-
-  }
-
-  function restarCarrito(id) {
-    1 < prod.cantidad && restarCart(prod.id)
-  }
 
   return (
     <div className={s.containerCartDetail}>
@@ -26,11 +16,19 @@ const CartDetail = ({ prod, deleteOne, sumarCart, restarCart }) => {
           <div className={s.subtotal}>
             <h4>${prod.price}</h4>
             <div className={s.cantidadbutton}>
-              <button className={s.boton} onClick={() => restarCarrito(prod.id)}>
+              <button
+                className={s.boton}
+                onClick={() => restarCart(prod.id)}
+                disabled={prod.cantidad === 1}
+              >
                 -
               </button>
               <h4>{prod.cantidad} </h4>
-              <button className={s.boton} onClick={() => sumarCarrito(prod.id)}>
+              <button
+                className={s.boton}
+                onClick={() => sumarCart(prod.id)}
+                disabled={prod.cantidad === prod.stock}
+              >
                 +
               </button>
             </div>

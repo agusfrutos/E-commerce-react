@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../Context/CartContext";
 
 import s from "./Nav.module.css";
 
 import carrito from "../../assets/shopping_cart.png";
 import logo from "../../assets/logo192.png";
+import Favorite from "../../assets/Favorite.png";
 
 const Nav = ({ isInHeader }) => {
+  const { totalUnidades } = useContext(CartContext);
+
   return (
     <nav className={isInHeader ? s.nav : s.navFooter}>
       <Link to="/">
@@ -35,10 +39,15 @@ const Nav = ({ isInHeader }) => {
           <li>{isInHeader ? "Billeteras" : undefined}</li>
         </Link>
       </ul>
-
-      <Link to="/cart">
-        <img src={isInHeader ? carrito : logo} alt="logo" />
-      </Link>
+      <div>
+        <Link to="/favorites">
+          <img src={isInHeader ? Favorite : null} alt="" />
+        </Link>
+        <Link to="/cart">
+          <span>{isInHeader ? totalUnidades : null}</span>
+          <img src={isInHeader ? carrito : logo} alt="logo" />
+        </Link>
+      </div>
     </nav>
   );
 };

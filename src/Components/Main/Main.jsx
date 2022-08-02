@@ -6,6 +6,7 @@ import DetailContainer from "./Detail/DetailContainer";
 import Cart from "./Cart/Cart";
 
 import styles from "./Main.module.css";
+import Favorites from "./Favorites/Favorites";
 
 const Main = () => {
   return (
@@ -15,6 +16,7 @@ const Main = () => {
         <Route path="/category/:categoria" element={<CardContainer />}/>
         <Route path="/detail/:id" element={<DetailContainer />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/favorites" element={<Favorites/>}/>
       </Routes>
     </div>
   );
