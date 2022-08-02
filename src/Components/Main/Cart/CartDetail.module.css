@@ -1,73 +1,71 @@
 .containerCartDetail {
-    display: flex;
-    border-bottom: 1px solid black;
+  display: flex;
+  border-bottom: 1px solid black;
 }
 
 .infoCartDetail {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .infoCartDetail img {
-    width: 10%;
-    border-radius: 8px;
-    padding: 20px;
+  width: 10%;
+  border-radius: 8px;
+  padding: 20px;
 }
 
 .infoCartDetail article {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .infoCartDetail article a {
-    font-size: 1.2em;
-    padding-left: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    color: black;
+  font-size: 1.2em;
+  padding-left: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
 }
 
-.infoCartDetail article h4 { 
-    font-size: 1.5em;
+.infoCartDetail article h4 {
+  font-size: 1.5em;
 }
 
-
-.cantidadbutton  {
-    display: flex;
-    padding: 0 80px;
+.cantidadbutton {
+  display: flex;
+  padding: 0 80px;
 }
 
 .subtotal {
-    display: flex;
-    align-items: center;
-    justify-self: end;
-    padding: 5px;
-    border-radius: 5px;
-
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .boton {
-    padding: 6px 8px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.2em;
-    cursor: pointer;
-    border: none;
-    padding: 15px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  padding: 15px;
 }
 
 .botonDelete {
-    display: inline-block;
-    padding: 6px 8px;
-    border-radius: 5px;
-    background-color: inherit;
-    font-size: 1.7em;
-    cursor: pointer;
-    border: none;
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 5px;
+  background-color: inherit;
+  font-size: 1.7em;
+  cursor: pointer;
+  border: none;
 }
 
 .botonDelete:hover {
-    color: #FF2C2C;
+  color: #ff2c2c;
 }

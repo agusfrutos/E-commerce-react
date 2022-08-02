@@ -8,18 +8,22 @@ import FavoriteFilled from "../../../assets/FavoriteFilled.png";
 import s from "./Card.module.css";
 
 const Card = ({ prod }) => {
-  const {fav, addFav} = useContext(FavContext)
+  const { fav, addFav } = useContext(FavContext);
 
-  const isInFav = isIn(fav, prod.id) 
+  const isInFav = isIn(fav, prod.id);
 
   return (
     <div className={s.card}>
       <div className={s.imagefavorite}>
-      <Link to={`/detail/${prod.id}`}>
-        
-        <img src={prod.img} alt={prod.name} />
-      </Link>
-      <img className={s.favorite} onClick={()=>addFav(prod)} src={isInFav ? FavoriteFilled : Favorite} alt='favoritos'/>
+        <Link to={`/detail/${prod.id}`}>
+          <img src={prod.img} alt={prod.name} />
+        </Link>
+        <img
+          className={s.favorite}
+          onClick={() => addFav(prod)}
+          src={isInFav ? FavoriteFilled : Favorite}
+          alt="favoritos"
+        />
       </div>
       <div className={s.info}>
         <Link to={`/detail/${prod.id}`}>

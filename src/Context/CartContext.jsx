@@ -45,7 +45,7 @@ const CartProvider = (props) => {
 
   const clearCart = () => {
     setCart([]);
-    localStorage.removeItem('items')
+    localStorage.removeItem("items");
   };
 
   const sumarCart = (id) => {

@@ -1,17 +1,17 @@
-import React, { useContext } from 'react'
-import Card from '../Card/Card'
-import { FavContext } from '../../../Context/FavContext'
+import React, { useContext } from "react";
+import Card from "../Card/Card";
+import { FavContext } from "../../../Context/FavContext";
 import s from "../Card/Card.module.css";
 
 const Favorites = () => {
-    const {fav} = useContext(FavContext)
+  const { fav } = useContext(FavContext);
   return (
     <div className={s.cardlist}>
-    {fav.map((prod) => (
+      {fav.map((prod) => (
         <Card prod={prod} key={prod.id} />
       ))}
-      </div>  
-  )
-}
+    </div>
+  );
+};
 
-export default Favorites
+export default Favorites;

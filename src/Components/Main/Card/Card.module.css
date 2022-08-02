@@ -62,12 +62,12 @@
 }
 
 .imagefavorite {
-  position:relative;
+  position: relative;
 }
 
 .favorite {
   position: absolute;
-  min-width:10%;
+  min-width: 10%;
   right: 0;
   top: 0;
 }

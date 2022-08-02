@@ -16,7 +16,6 @@ export const CardContainer = () => {
     borderColor: "red",
   };
 
-
   useEffect(() => {
     setLoading(true);
     const URL = "https://fake-products-eric.herokuapp.com/api/products";
@@ -48,7 +47,11 @@ export const CardContainer = () => {
   return (
     <div className={s.cardcontainer}>
       <h2>Artículos</h2>
-      {loading ? <BarLoader cssOverride={override}/> : <CardList items={items} />}
+      {loading ? (
+        <BarLoader cssOverride={override} />
+      ) : (
+        <CardList items={items} />
+      )}
     </div>
   );
 };

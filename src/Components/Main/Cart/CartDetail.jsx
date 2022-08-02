@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import s from "./CartDetail.module.css";
 
 const CartDetail = ({ prod, deleteOne, sumarCart, restarCart }) => {
-
   return (
     <div className={s.containerCartDetail}>
       <div className={s.infoCartDetail}>

@@ -24,14 +24,18 @@ const Counter = ({ add, stock, initial }) => {
 
   const agregar = () => {
     add(count);
-};
+  };
 
   return (
     <div className={s.counter}>
       <div className={s.botones}>
-        <button className={s.resta} onClick={restar}>-</button>
-      <p className={s.numero}>{count}</p>
-        <button className={s.suma} onClick={sumar}>+</button>
+        <button className={s.resta} onClick={restar}>
+          -
+        </button>
+        <p className={s.numero}>{count}</p>
+        <button className={s.suma} onClick={sumar}>
+          +
+        </button>
       </div>
       <button className={s.agregar} onClick={agregar}>
         Agregar al Carrito

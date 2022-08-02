@@ -25,7 +25,7 @@
 }
 
 .buttonhome:hover {
- background-color: #999;
+  background-color: #999;
 }
 
 .vaciar {
@@ -36,4 +36,3 @@
   cursor: pointer;
   margin: 10px 0px;
 }
-

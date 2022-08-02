@@ -13,10 +13,10 @@ const Main = () => {
     <div className={styles.main}>
       <Routes>
         <Route path="/" element={<CardContainer />} />
-        <Route path="/category/:categoria" element={<CardContainer />}/>
+        <Route path="/category/:categoria" element={<CardContainer />} />
         <Route path="/detail/:id" element={<DetailContainer />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/favorites" element={<Favorites/>}/>
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
     </div>
   );
