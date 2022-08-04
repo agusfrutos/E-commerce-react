@@ -1,13 +1,20 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../../Context/CartContext";
 import CartDetail from "./CartDetail";
+import Form from "../Form/Form";
 import s from "./Cart.module.css";
-// import Form from '../Form/Form'
 
 const Cart = () => {
   const { cart, totalCart, clearCart, deleteOne, restarCart, sumarCart } =
     useContext(CartContext);
+  // eslint-disable-next-line
+  const [idCompra, setIdCompra] = useState("");
+
+  const handleId = (param) => {
+    setIdCompra(param);
+    console.log("id: ", param);
+  };
 
   if (cart.length === 0) {
     return (
@@ -38,8 +45,13 @@ const Cart = () => {
           </button>
           <h2>Total: ${totalCart} </h2>
         </div>
+        <Form
+          cart={cart}
+          clearCart={clearCart}
+          totalCart={totalCart}
+          handleId={handleId}
+        />
       </div>
-      {/* <Form /> */}
     </>
   );
 };

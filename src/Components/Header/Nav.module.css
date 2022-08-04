@@ -19,16 +19,13 @@
   list-style: none;
 }
 
-.nav ul li {
-  margin: 0px 15px;
-}
-
 .nav a {
   text-decoration: none;
   color: #333;
+  margin: 0px 10px;
 }
 
-.nav li:hover {
+.nav a:hover {
   text-decoration: underline;
 }
 
@@ -39,8 +36,7 @@
 
 .navFooter {
   background-color: #222;
-  display:flex;
-
+  display: flex;
   bottom: 0;
   right: 0;
   left: 0;
@@ -55,13 +51,15 @@
 .navFooter ul {
   list-style: none;
 }
-.navFooter li {
+
+.navFooter a {
+  text-decoration: none;
   color: white;
   margin: 5px;
 }
 
-.navFooter a {
-    text-decoration: none;
+.navFooter a:hover {
+  text-decoration: underline;
 }
 
 .navFooter img {

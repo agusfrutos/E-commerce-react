@@ -41,6 +41,7 @@
   margin-bottom: 8px;
   font-size: 17px;
   line-height: 1.4;
+  color: #8a8a8a;
 }
 
 .detail .detail_info h3 {
@@ -49,24 +50,24 @@
   border-radius: 5px;
 }
 
-.categoria a {
-  text-decoration: none;
-  color: black;
-  text-transform: capitalize;
-}
-
-.categoria a:hover {
-  text-decoration: underline;
-}
-
 .counterfavorite {
   display: flex;
+  
 }
 
 .detail .favorite {
   width: 100%;
   margin-left: 1em;
 }
-/* .detail .detail_info h4 {
+.detail .detail_info h4 {
+  color: #8a8a8a;
+}
 
-} */
+.detail .detail_info h4 a {
+  color: #8a8a8a;
+}
+
+.categoria a {
+  color: #8a8a8a;
+  text-transform: capitalize;
+}

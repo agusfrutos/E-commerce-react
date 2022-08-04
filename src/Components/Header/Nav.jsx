@@ -11,33 +11,65 @@ import Favorite from "../../assets/Favorite.png";
 const Nav = ({ isInHeader }) => {
   const { totalUnidades } = useContext(CartContext);
 
+  const categoriasNav = [
+    {
+      id: 1,
+      name: "Remeras",
+      path: "/category/remeras",
+    },
+    {
+      id: 2,
+      name: "Camisas",
+      path: "/category/camisas",
+    },
+    {
+      id: 3,
+      name: "Gorras",
+      path: "/category/gorras",
+    },
+    {
+      id: 4,
+      name: "Billeteras",
+      path: "/category/billeteras",
+    },
+    {
+      id: 5,
+      name: "Riñoneras",
+      path: "/category/rinoneras",
+    },
+  ];
+
+  const categoriasFooter = [
+    {
+      id: 1,
+      name: "Facebook",
+      path: 'https://google.com',
+    },
+    {
+      id: 2,
+      name: "Instagram",
+      path: "https://www.instagram.com/",
+    },
+    {
+      id: 3,
+      name: "Linkedin",
+      path: "https://www.linkedin.com/",
+    },
+  ];
+
+  const categorias = isInHeader ? categoriasNav : categoriasFooter;
+
   return (
     <nav className={isInHeader ? s.nav : s.navFooter}>
       <Link to="/">
         <h2>CDA TIENDA</h2>
       </Link>
       <ul>
-        <Link
-          to={isInHeader ? "/category/remeras" : "https://www.instagram.com/"}
-        >
-          <li>{isInHeader ? "Remeras" : "Instagram"}</li>
-        </Link>
-        <Link
-          to={isInHeader ? "/category/camisas" : "https://www.facebook.com/"}
-        >
-          <li>{isInHeader ? "Camisas" : "Facebok"}</li>
-        </Link>
-        <Link
-          to={isInHeader ? "/category/gorras" : "https://www.linkedin.com/"}
-        >
-          <li>{isInHeader ? "Gorras" : "Linkedin"}</li>
-        </Link>
-        <Link to={"/category/rinoneras"}>
-          <li>{isInHeader ? "Riñoneras" : undefined}</li>
-        </Link>
-        <Link to={"/category/billeteras"}>
-          <li>{isInHeader ? "Billeteras" : undefined}</li>
-        </Link>
+        {categorias.map((categoria) => (
+          <Link key={categoria.id} to={categoria.path}>
+            {categoria.name}
+          </Link>
+        ))}
       </ul>
       <div>
         <Link to="/favorites">

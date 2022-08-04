@@ -42,7 +42,7 @@ const CardDetail = ({ item }) => {
         </p>
         {isInCartDetail ? (
           <h4>
-            Ya está en el <Link to="/cart">carrito</Link>
+            Este producto ya esta en el <Link to="/cart">carrito</Link>
           </h4>
         ) : (
           <div className={s.counterfavorite}>
@@ -56,10 +56,8 @@ const CardDetail = ({ item }) => {
           </div>
         )}
         <p className={s.categoria}>
-          Categoría:
-          <strong>
-            <Link to={`/category/${item.categoria}`}>{item.categoria}</Link>
-          </strong>
+          Categoría:{" "}
+          <Link to={`/category/${item.categoria}`}>{item.categoria}</Link>
         </p>
       </div>
     </div>

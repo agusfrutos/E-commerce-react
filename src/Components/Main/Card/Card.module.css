@@ -70,6 +70,17 @@
   min-width: 10%;
   right: 0;
   top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.imagefavorite:hover .favorite {
+  animation: card-opacity 1s;
+  animation-fill-mode: forwards;
+}
+
+.favorite:hover {
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 700px) {

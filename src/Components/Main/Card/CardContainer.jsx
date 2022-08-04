@@ -10,6 +10,8 @@ export const CardContainer = () => {
   const [items, setItems] = useState([]);
   const { categoria } = useParams();
 
+  const URL = "https://fake-products-eric.herokuapp.com/api/products";
+
   const override = {
     display: "block",
     margin: "0 auto",
@@ -18,7 +20,6 @@ export const CardContainer = () => {
 
   useEffect(() => {
     setLoading(true);
-    const URL = "https://fake-products-eric.herokuapp.com/api/products";
     const peticion = categoria ? `${URL}/category/${categoria}` : URL;
 
     fetch(peticion)
@@ -29,20 +30,6 @@ export const CardContainer = () => {
       })
       .catch((err) => console.log(err));
   }, [categoria]);
-
-  // useEffect(() => {
-  //   if (categoria) {
-  //     fetch(
-  //       `https://fake-products-eric.herokuapp.com/api/products/category/${categoria}`
-  //     )
-  //       .then((res) => res.json())
-  //       .then((res) => setItems(res));
-  //   } else {
-  //     fetch("https://fake-products-eric.herokuapp.com/api/products")
-  //       .then((res) => res.json())
-  //       .then((res) => setItems(res));
-  //   }
-  // }, [categoria]);
 
   return (
     <div className={s.cardcontainer}>
